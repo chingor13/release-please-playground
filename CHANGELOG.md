@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/chingor13/release-please-playground/compare/release-please-playground-v1.1.1...release-please-playground-v1.1.2) (2022-09-27)
+
+
+### Bug Fixes
+
+* render all imagesets as <picture> elements ([55c22b9](https://github.com/chingor13/release-please-playground/commit/55c22b9d35aa30dd31a178dd34a6cdefc0020196))
+
 ### [1.1.1](https://github.com/chingor13/release-please-playground/compare/release-please-playground-v1.1.0...release-please-playground-v1.1.1) (2021-12-29)
 
 
