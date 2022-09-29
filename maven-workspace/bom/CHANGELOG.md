@@ -1,5 +1,10 @@
 # Changelog
 
+* The following workspace dependencies were updated
+    * com.google.example:multi1-bom bumped to 1.2.0,
+    * com.google.example:multi1-sub1 bumped to 2.3.0,
+    * com.google.example:multi1-sub2 bumped to 3.4.0
+
 ## 0.1.0 (2022-09-29)
 
 
