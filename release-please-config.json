@@ -12,9 +12,6 @@
     }
   },
   "plugins": [
-    {
-      "type": "maven-workspace",
-      "considerAllArtifacts": true
-    }
+    "sentence-case"
   ]
 }
