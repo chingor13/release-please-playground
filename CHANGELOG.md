@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2023-12-08)
+
+
+### Features
+
+* add test app ([4697cc0](https://github.com/chingor13/release-please-playground/commit/4697cc0a7a039e7e992e8f25eef5584c364ea19f))
+
 ### [1.1.1](https://github.com/chingor13/release-please-playground/compare/release-please-playground-v1.1.0...release-please-playground-v1.1.1) (2021-12-29)
 
 
