@@ -1,20 +1,8 @@
 {
-  "release-type": "java-yoshi",
-  "packages": {
-    "maven-workspace/bom": {
-      "component": "bom"
-    },
-    "maven-workspace/multi1": {
-      "component": "multi1"
-    },
-    "maven-workspace/multi2": {
-      "component": "multi2"
+    "packages": {
+        "app": {
+            "package-name": "laravel-app",
+            "changelog-path": "/CHANGELOG.md"
+        }
     }
-  },
-  "plugins": [
-    {
-      "type": "maven-workspace",
-      "considerAllArtifacts": true
-    }
-  ]
 }
