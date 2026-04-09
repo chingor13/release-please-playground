@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/chingor13/release-please-playground/compare/v1.2.0...v1.3.0) (2026-04-09)
+
+
+### Features
+
+* try local release ([#70](https://github.com/chingor13/release-please-playground/issues/70)) ([7142639](https://github.com/chingor13/release-please-playground/commit/714263997b64ee00eca2a8b76d31ac8421a6c3a5))
+
 ## [1.2.0](https://github.com/chingor13/release-please-playground/compare/v1.1.1...v1.2.0) (2023-12-12)
 
 
