@@ -17,6 +17,7 @@ jobs:
         filters: |
           library:
             - 'packages/**'
+            - '.github/workflows/conditional.yaml'
 
   units:
     needs: filter
