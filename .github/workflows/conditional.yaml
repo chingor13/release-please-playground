@@ -39,18 +39,9 @@ jobs:
 
   finale:
     needs: units
-    if: ${{ always() }} # Only execute on pull_request trigger event
+    if: ${{ always() }} # Always run even if any "needs" jobs fail
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout @ target branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.base_ref }}
-      - uses: actions/setup-java@v4
-        with:
-          java-version: 17
-          distribution: temurin
-          cache: maven
       - name: Fail if any previous failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: exit 1
