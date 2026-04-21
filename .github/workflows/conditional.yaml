@@ -1,0 +1,49 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+name: conditional
+jobs:
+  filter:
+    runs-on: ubuntu-latest
+    outputs:
+      library: ${{ steps.filter.outputs.library }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
+      id: filter
+      with:
+        filters: |
+          library:
+            - 'packages/**'
+
+  units:
+    needs: filter
+    if: ${{ needs.filter.outputs.library == 'true' }}
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        java: [ 11, 17, 21, 25 ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: temurin
+      - run: mvn -version
+
+  finale:
+    needs: units
+    if: ${{ always() }} # Only execute on pull_request trigger event
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout @ target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.base_ref }}
+      - uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+          cache: maven
