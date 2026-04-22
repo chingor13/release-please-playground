@@ -85,6 +85,8 @@ jobs:
     if: ${{ always() }} # Always run even if any "needs" jobs fail
     runs-on: ubuntu-22.04
     steps:
+      - name: debug
+        run: echo "${{ needs.*.result }}"
       - name: Fail if any previous failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: exit 1
