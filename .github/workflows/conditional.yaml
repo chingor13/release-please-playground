@@ -83,7 +83,7 @@ jobs:
         run: echo "Success!"
 
   finale2:
-    needs: [ split-units ]
+    needs: [ changes, split-units ]
     if: ${{ always() }} # Always run even if any "needs" jobs fail
     runs-on: ubuntu-22.04
     steps:
