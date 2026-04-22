@@ -90,9 +90,9 @@ jobs:
       - name: debug
         run: echo "${{ toJSON(needs) }}"
       - name: debug
-        run: echo "${{ needs.changes.output }}"
+        run: echo "${{ needs.changes.outputs }}"
       - name: Fail if any previous failure
-        if: ${{ needs.changes.output != '[]' && contains(needs.*.result, 'failure') }}
+        if: ${{ needs.changes.outputs.packages != '[]' && contains(needs.*.result, 'failure') }}
         run: exit 1
       - name: Success otherwise
         run: echo "Success!"
